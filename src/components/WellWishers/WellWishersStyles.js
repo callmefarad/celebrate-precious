@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 export const WisherContainer = styled.div`
 background-color: none;
-width: inherit;
-height: 100px;
+width: 70%;
+height: 70px;
 display: flex;
 justify-content: center;
 align-items: center;

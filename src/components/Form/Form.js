@@ -1,16 +1,15 @@
 import React, {useState, useEffect} from 'react'
 // import { useHistory } from "react-router-dom";
 import { useNavigate } from "react-router";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { FormContainer, Surname, FirstName, FormWrapper, FormWrap, SelfWish } from './FormStyle'
 import {createWish} from '../../actions/wish'
 import {
   makeStyles,
   TextField,
   Button,
-  CircularProgress,
 } from "@material-ui/core";
-import {api_url} from '../../apiConfig'
+// import {api_url} from '../../apiConfig'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,13 +35,11 @@ function Form () {
 //   const history = useHistory();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const loading = useSelector((state) => state.users?.loading);
   const [inputs, setInputs] = useState({
     name: "",
     wish: "",
   });
   const [errors, setErrors] = useState({});
-  const [ submitted, setSubmitted ] = useState( false );
     
     // run validation on every reload
     useEffect( () => {
@@ -52,7 +49,6 @@ function Form () {
     // handle submit
     function handleSubmit(e) {
     e.preventDefault();
-    setSubmitted(true);
     if (handleValidate(inputs)) {
       dispatch( createWish( inputs, navigate ) );
     }
@@ -135,9 +131,6 @@ function Form () {
                     >
                     Submit
                   </Button>
-                    {loading && (
-                      <CircularProgress size={24} className={classes.buttonProgress} />
-                    )}
                   </form>
             </FormWrapper>
           </FormWrap>
