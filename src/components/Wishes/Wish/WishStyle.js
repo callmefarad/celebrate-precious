@@ -8,7 +8,7 @@ width: 90%;
 padding: 15px;
 border-radius: 5px;
 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-margin-bottom: 10px;
+// margin-bottom: 10px;
 
 @media (max-width: 425px) {
     width: 85%;
@@ -34,5 +34,22 @@ font-weight: 500;
 color: #686363;
 text-transform: capitalize;
 `;
-// export const WishContainer = styled.div``;
+export const PostTime = styled.div`
+display: flex;
+text-transform: capitalize;
+`;
+export const PreTime = styled.div`
+font-size: 10px;
+color: black;
+font-family: Poppins;
+margin-top: 5px;
+margin-right: 5px;
+display: flex;
+`;
+export const ActualTime = styled.div`
+font-size: 10px;
+color: tomato;
+font-family: Poppins;
+margin-top: 5px;
+`;
 

@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import wishMe from "../../images/wish-me-page-bg.png"
 
+
 export const FormContainer = styled.div`
 // background-color: blue;
 background-image: url(${wishMe});
@@ -14,6 +15,7 @@ flex-direction: column;
 justify-content: center;
 
 @media (max-width: 425px){
+    // background-color: #9ABDD1;
     // background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -121,7 +123,7 @@ width: 90%;
 `;
 
 export const FormWrapper = styled.div`
-// background-color: blue;
+// background-color: tomato;
 height: auto;
 width: 70%;
 padding: 20px;
@@ -129,81 +131,17 @@ display: flex;
 flex-direction: column;
 align-items: center;
 
-@media (min-width: 425px){
-width: 100%;
-}
-@media (min-width: 375px){
-width: 90%;
-}
-@media (min-width: 320px){
-width: 90%;
-}
-`;
-export const Name = styled.input`
-height: 50px;
-width: 90%;
-border: none;
-border-radius: 4px;
-margin-bottom: 15px;
-padding-left: 10px;
-font-family: Poppins;
-
-@media (min-width: 425px){
+@media (max-width: 425px){
 width: 80%;
 }
-@media (min-width: 375px){
+@media (max-width: 375px){
+width: 90%;
+}
+@media (max-width: 320px){
 width: 90%;
 }
 `;
-export const Msg = styled.textarea`
-height: 120px;
-width: 90%;
-border: none;
-border-radius: 4px;
-margin-bottom: 15px;
-padding-left: 10px;
-padding-top: 10px;
-font-family: Poppins;
-resize: none;
 
-@media (min-width: 425px){
+export const TextField = styled.div`
 width: 80%;
-}
-@media (min-width: 375px){
-width: 90%;
-}
-`;
-export const SendButton = styled.div`
-background-color: #00A3FF;
-width: 90%;
-height: auto;
-padding 12px;
-border: none;
-border-radius: 4px;
-display: flex;
-justify-content: center;
-align-items: center;
-cursor: pointer;
-transition: background-color 1s;
-
-:hover{
-    background-color: #004064;
-}
-
-@media (min-width: 425px){
-width: 85%;
-}
-@media (min-width: 375px){
-// width: 80%;
-}
-@media (min-width: 320px){
-width: 80%;
-}
-`;
-export const Text = styled.div`
-font-family: Raleway;
-font-weight: 700;
-font-size: 24px;
-text-transform: capitalize;
-color: white;
 `;
