@@ -99,33 +99,6 @@ font-size: 26px;
 }
 `;
 
-// export const SelfWish = styled.div`
-// background-color: #303F9F;
-// // background-color: #f1f1f1;
-// border: none;
-// border-radius: 5px;
-// height: 90px;
-// // height: auto;
-// width: 300px;
-// // width: 70%;
-// display: flex;
-// justify-content: center;
-// align-items: center;
-// box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-// padding-right: 10px;
-// padding-left: 10px;
-
-// @media (min-width: 425px){
-// width: 80%;
-// }
-// @media (min-width: 375px){
-// width: 90%;
-// }
-// @media (min-width: 320px){
-// width: 90%;
-// }
-// `;
-
 export const Text1 = styled.div`
 color: white;
 font-family: Roboto;

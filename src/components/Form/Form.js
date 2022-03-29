@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-// import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
@@ -10,7 +9,6 @@ import {
   TextField,
   Button,
 } from "@material-ui/core";
-// import {api_url} from '../../apiConfig'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -51,21 +49,17 @@ function Form () {
     function handleSubmit(e) {
     e.preventDefault();
     if (handleValidate(inputs)) {
+      // echo a message upon submit
       alert( "Successfully Sent" );
-      dispatch( createWish( inputs) );
-    }
+      // send the data to the database
+      dispatch( createWish( inputs ) )
+      navigate('/wishes')
+      }
     }
       
     const clearInput = ()=>{
-      
+      setInputs( { name: "", wish: "" } );
   }
-  
-  // route site
-  // const routeSite = () => {
-  //   let path = `${ api_url }/precious/wishes`;
-  //   console.log(path)
-  //   navigate(path)
-  // }
     
     // validate all input
     function handleValidate(values) {
@@ -88,12 +82,6 @@ function Form () {
           <FormWrap>
               <Surname>happy birthday</Surname>
               <FirstName>precious onuegbu</FirstName>
-              {/* <SelfWish>
-                <Text1>
-                  Birthdays happen once every year. Am happy to celebrate another one with my family, love ones and friends. More grace to me. 🎂🥂
-                </Text1>
-              </SelfWish> */}
-              
               <FormWrapper>
                 <form 
                 style={{
@@ -105,7 +93,8 @@ function Form () {
                   alignItems: "center"
                   }} 
                   className={ classes.root } 
-                  onSubmit={handleSubmit}>
+                  onSubmit={handleSubmit}
+                  >
                     <TextField
                     style = {{width: '100%'}}
                     id="outlined-basic"
@@ -115,7 +104,6 @@ function Form () {
                     name="name"
                     label="Name"
                     value={inputs.name}
-                    // onChange={handleChange}
                     onChange={(e)=>{setInputs({...inputs, name: e.target.value})}}
                     fullWidth
                     />
@@ -126,14 +114,11 @@ function Form () {
                     type="text"
                     multiline
                     rows={6}
-                    // fullWidth
                     name="wish"
                     label="Write Your Wish"
                     value={inputs.wish}
-                    // onChange={handleChange}
                     onChange={(e)=>{setInputs({...inputs, wish: e.target.value})}}
                     />
-                    <Link to='/wishes' style={{ textDecoration: 'inherit'}}>
                     <Button
                     id="myButton"
                     style = {{width: '100%'}}
@@ -142,18 +127,10 @@ function Form () {
                     variant="contained"
                     color="primary"
                     size="large"
-                    
-                    // onClick={()=>{
-                    //   if ( handleValidate( inputs ) ) {
-                    //     alert("Your wish was sent successfully")
-                    //   }
-                    // }
-                    // }
                     >
                     Submit
                   </Button>
-                  </Link>
-                    <Link to='/' style={{ textDecoration: 'inherit'}}>
+                    <Link to='/career' style={{ textDecoration: 'inherit'}}>
                     <Button
                     id="myButton"
                     style = {{width: '100%'}}
