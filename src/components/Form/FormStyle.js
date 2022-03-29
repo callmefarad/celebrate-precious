@@ -101,15 +101,10 @@ font-size: 26px;
 
 export const SelfWish = styled.div`
 // background-color: red;
-display: flex;
-flex-direction: column;
-align-items: center;
 height: auto;
 width: 70%;
-margin-top: 15px;
-margin-bottom: 15px;
 color: #3A3A3A;
-padding: 20px;
+text-align: center;
 
 @media (min-width: 425px){
 width: 80%;
@@ -126,7 +121,8 @@ export const FormWrapper = styled.div`
 // background-color: tomato;
 height: auto;
 width: 70%;
-padding: 20px;
+margin-top: 15px;
+// padding: 5px;
 display: flex;
 flex-direction: column;
 align-items: center;

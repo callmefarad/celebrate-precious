@@ -21,7 +21,7 @@ const axios = require( "axios" );
 
 // action to create a user
 // export const createWish = ( data, history ) => {
-export const createWish = ( data, navigate) => {
+export const createWish = ( data) => {
     return (dispatch) => {
     dispatch({ type: CREATE_WISH_REQUEST });
     axios
@@ -33,7 +33,8 @@ export const createWish = ( data, navigate) => {
             type: CREATE_WISH_SUCCESS,
             payload: res.data,
           });
-          navigate(`${api_url}/precious/wishes`);
+          // navigate(`${api_url}/precious/wishes`);
+          // navigate('/wishes');
         }, 1000);
       })
       .catch(function (error) {
