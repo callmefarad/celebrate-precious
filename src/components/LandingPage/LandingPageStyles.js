@@ -84,7 +84,8 @@ padding-top: 15px;
 padding-bottom: 15px;
 `;
 export const AllWish = styled.div`
-background-color: #FF4545;
+// background-color: #FF4545;
+background-color: #00A3FF;
 border: none;
 border-radius: 50px;
 color: white;
@@ -97,7 +98,8 @@ cursor: pointer;
 transition: background-color 1s;
 
 :hover{
-background-color: #780808;
+// background-color: #780808;
+background-color: #00446A;
 }
 `;
 export const Wish = styled.div`
@@ -122,4 +124,22 @@ font-family: Roboto;
 font-size: 14px;
 text-transform: capitalize;
 font-weight: bold;
+`;
+
+export const Career = styled.div`
+background-color: #FF4545;
+border: none;
+border-radius: 5px;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 280px;
+height: 40px;
+cursor: pointer;
+transition: background-color 1s;
+
+:hover{
+background-color: #780808;
+}
 `;

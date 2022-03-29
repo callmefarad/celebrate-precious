@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { LandContainer, CardContainer, ImageWrapper, Name, Desc, NavButton, AllWish, Wish, Text } from './LandingPageStyles'
+import { LandContainer, CardContainer, ImageWrapper, Name, Desc, NavButton, AllWish, Wish, Text, Career } from './LandingPageStyles'
 const profile = require('../../images/profile-pics.png')
 
 const LandingPage = () => {
@@ -20,15 +20,20 @@ const LandingPage = () => {
               <NavButton>
                    <Link to="/wishes" style={{ color: 'inherit', textDecoration: 'inherit'}}>
                   <AllWish>
-                          <Text>all wishes</Text>
-                      </AllWish>
+                    <Text>wishes</Text>
+                  </AllWish>
                   </Link>
                   <Link to="/form" style={{ color: 'inherit', textDecoration: 'inherit'}}>
                   <Wish>
-                          <Text>wish me</Text>
-                      </Wish>
-                      </Link>
+                    <Text>wish me</Text>
+                  </Wish>
+                  </Link>
               </NavButton>
+              <Link to="/career" style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                  <Career>
+                    <Text>support my career</Text>
+                  </Career>
+                  </Link>
         </CardContainer>
       </LandContainer>
   )

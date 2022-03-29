@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react'
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
-import { FormContainer, Surname, FirstName, FormWrapper, FormWrap, SelfWish } from './FormStyle'
+import { FormContainer, Surname, FirstName, FormWrapper, FormWrap, SelfWish, Text1 } from './FormStyle'
 import {createWish} from '../../actions/wish'
 import {
   makeStyles,
@@ -88,8 +88,11 @@ function Form () {
           <FormWrap>
               <Surname>happy birthday</Surname>
               <FirstName>precious onuegbu</FirstName>
-              <SelfWish>Birthdays happen once every year. Am happy to celebrate another one with my family, love ones and friends. More grace to me. 🎂🥂
-              </SelfWish>
+              {/* <SelfWish>
+                <Text1>
+                  Birthdays happen once every year. Am happy to celebrate another one with my family, love ones and friends. More grace to me. 🎂🥂
+                </Text1>
+              </SelfWish> */}
               
               <FormWrapper>
                 <form 

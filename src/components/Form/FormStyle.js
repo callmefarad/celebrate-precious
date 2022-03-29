@@ -39,7 +39,7 @@ align-items: center;
 margin-top: 100px;
 margin-bottom: 100px;
 margin-left: 100px;
-padding: 40px;
+// padding: 40px;
 width: 40%;
 height: auto;
 
@@ -99,29 +99,46 @@ font-size: 26px;
 }
 `;
 
-export const SelfWish = styled.div`
-// background-color: red;
-height: auto;
-width: 70%;
-color: #3A3A3A;
-text-align: center;
+// export const SelfWish = styled.div`
+// background-color: #303F9F;
+// // background-color: #f1f1f1;
+// border: none;
+// border-radius: 5px;
+// height: 90px;
+// // height: auto;
+// width: 300px;
+// // width: 70%;
+// display: flex;
+// justify-content: center;
+// align-items: center;
+// box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+// padding-right: 10px;
+// padding-left: 10px;
 
-@media (min-width: 425px){
-width: 80%;
-}
-@media (min-width: 375px){
-width: 90%;
-}
-@media (min-width: 320px){
-width: 90%;
-}
+// @media (min-width: 425px){
+// width: 80%;
+// }
+// @media (min-width: 375px){
+// width: 90%;
+// }
+// @media (min-width: 320px){
+// width: 90%;
+// }
+// `;
+
+export const Text1 = styled.div`
+color: white;
+font-family: Roboto;
+font-weight: 300;
+// color: #3A3A3A;
+text-align: center;
 `;
 
 export const FormWrapper = styled.div`
 // background-color: tomato;
 height: auto;
 width: 70%;
-margin-top: 15px;
+margin-top: 30px;
 // padding: 5px;
 display: flex;
 flex-direction: column;
