@@ -10,6 +10,7 @@ import {
   Button,
   CircularProgress,
 } from "@material-ui/core";
+import {api_url} from '../../apiConfig'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+
 
 function Form () {
   const classes = useStyles();
@@ -52,13 +54,20 @@ function Form () {
     e.preventDefault();
     setSubmitted(true);
     if (handleValidate(inputs)) {
-      dispatch(createWish(inputs, navigate));
+      dispatch( createWish( inputs, navigate ) );
     }
     }
       
     const clearInput = ()=>{
       
-    }
+  }
+  
+  // route site
+  // const routeSite = () => {
+  //   let path = `${ api_url }/precious/wishes`;
+  //   console.log(path)
+  //   navigate(path)
+  // }
     
     // validate all input
     function handleValidate(values) {
@@ -85,7 +94,7 @@ function Form () {
               </SelfWish>
               
               <FormWrapper>
-                <form action='/wishes' className={ classes.root } onSubmit={handleSubmit}>
+                <form className={ classes.root } onSubmit={handleSubmit}>
                     <TextField
                     style = {{width: '100%'}}
                     id="outlined-basic"
@@ -114,12 +123,15 @@ function Form () {
                     onChange={(e)=>{setInputs({...inputs, wish: e.target.value})}}
                     />
                     <Button
+                    id="myButton"
                     style = {{width: '100%'}}
                     // disabled={loading}
                     type="submit"
                     variant="contained"
                     color="primary"
                     size="large"
+                    
+                    // onClick={routeSite}
                     >
                     Submit
                   </Button>
