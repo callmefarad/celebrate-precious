@@ -9,6 +9,7 @@ import {
   TextField,
   Button,
 } from "@material-ui/core";
+import Footer from "../Footer/Footer"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -57,9 +58,9 @@ function Form () {
       }
     }
       
-    const clearInput = ()=>{
-      setInputs( { name: "", wish: "" } );
-  }
+  //   const clearInput = ()=>{
+  //     setInputs( { name: "", wish: "" } );
+  // }
     
     // validate all input
     function handleValidate(values) {
@@ -146,6 +147,7 @@ function Form () {
                   </form>
             </FormWrapper>
           </FormWrap>
+          <Footer />
       </FormContainer>
   )
 }

@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import { WisherContainer } from './WellWishersStyles'
+import { WisherContainer,WellWisher } from './WellWishersStyles'
 import Avatar from '@mui/material/Avatar';
 import AvatarGroup from '@mui/material/AvatarGroup';
 import { deepOrange } from '@mui/material/colors';
@@ -15,6 +15,7 @@ function WellWishers () {
     }, []);
   return (
       <WisherContainer>
+          <WellWisher>my well wishers 👇</WellWisher>
           <AvatarGroup max={4}>
           { wishes.map( ( wish ) => (
               <Avatar

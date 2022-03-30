@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { LandContainer, CardContainer, ImageWrapper, Name, Desc, NavButton, AllWish, Wish, Text, Career } from './LandingPageStyles'
-const profile = require('../../images/profile-pics.png')
+import profile from '../../images/profile-pics.png'
+import Footer from '../Footer/Footer';
 
 const LandingPage = () => {
   return (
@@ -33,8 +34,9 @@ const LandingPage = () => {
                   <Career>
                     <Text>support my career</Text>
                   </Career>
-                  </Link>
+              </Link>
         </CardContainer>
+        <Footer />
       </LandContainer>
   )
 }

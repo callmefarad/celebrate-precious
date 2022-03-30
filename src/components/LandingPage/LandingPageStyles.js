@@ -11,6 +11,7 @@ background-repeat: no-repeat;
 // background-size: 100% 100%;
 background-position: center;
 display: flex;
+flex-direction: column;
 justify-content: center;
 align-items: center;
 height: 100vh;
@@ -31,7 +32,7 @@ justify-content: center;
 align-items: center;
 border-radius: 5px;
 box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-
+// margin-bottom: 20px;
 :hover{
     transform: scale(0.9);
     transition: all 0.5s ease-out;
@@ -141,5 +142,12 @@ transition: background-color 1s;
 
 :hover{
 background-color: #780808;
+}
+
+@media(max-width: 375px){
+    width: 250px;
+}
+@media(max-width: 320px){
+    width: 250px;
 }
 `;
