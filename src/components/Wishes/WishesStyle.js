@@ -130,7 +130,7 @@ export const Right = styled.div`
 width: 40%;
 display: flex;
 justify-content: center;
-align-items: center;
+// align-items: center;
 
 @media (max-width: 768px) {
 width: 80%;
@@ -141,7 +141,7 @@ export const ImageHolder = styled.div`
 // background-color: green;
 width: 400px;
 height: 400px;
-position: sticky;
+position: fixed;
 display: flex;
 justify-content: center;
 border: none;
@@ -157,6 +157,7 @@ margin-bottom: 10px;
 }
 
 @media (max-width: 425px) {
+position: relative;
 width: 250px;
 height: 250px;
 }

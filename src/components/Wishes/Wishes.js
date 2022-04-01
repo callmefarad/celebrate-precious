@@ -40,7 +40,8 @@ function Wishes() {
                     width: "inherit",
                     objectFit: "cover",
                     border: "none",
-                    borderRadius: "100%"
+                    borderRadius: "100%",
+
                 } }/>
                 </ImageHolder>
             </Right>
